@@ -1,0 +1,64 @@
+.Menu{
+    position: relative;
+    margin: 2em 3em;
+}
+
+.m-item{
+    position: absolute;
+    top: 0;
+    
+    width: 300px;
+    height: 300px;
+    background-color: #FFCCBC;
+
+    /* padding: 0.2em; */
+    
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: 1s;
+}
+
+.m-item:hover{
+    border: 1px solid black;
+}
+
+.m-logo{
+    z-index: 1;
+}
+
+.open-1{
+    top: 305px;
+    height: 75px;
+    /* width: 250px;
+    margin-left: 50px;
+    float: right; */
+    background-color: #C8E6C9;
+}
+.open-2{
+    top: 385px;
+    height: 75px;
+    /* width: 250px;
+    margin-left: 50px; */
+    background-color: #C8E6C9;
+}
+.open-3{
+    top: 465px;
+    height: 75px;
+    /* width: 250px;
+    margin-left: 50px; */
+    background-color: #C8E6C9 ;
+}
+.open-4{
+    top: 545px;
+    height: 75px;
+    /* width: 270px;
+    margin-left: 30px; */
+    background-color: #C8E6C9;
+}

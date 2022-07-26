@@ -1,9 +1,13 @@
 package com.hr.backend.entity;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -13,11 +17,16 @@ public class UserEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
+	@Column(length = 35)
 	private String firstName;
+	@Column(length = 35)
 	private String lastName;
 	private double annualSalary;
+	@Column(length = 12)
 	private String dateOfBirth;
+	@Column(length = 75)
 	private String email;
+	@Column(length = 10)
 	private Gender gender;
 	private String mobilePhone;
 	private UserType userType;

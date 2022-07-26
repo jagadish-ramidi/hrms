@@ -1,9 +1,13 @@
 package com.hr.backend.entity;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,22 +16,29 @@ public class UserAddressEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private long id;
+	private long addressId;
 	private long userId;
+	@Column(length = 75)
 	private String addrLn1;
+	@Column(length = 75)
 	private String addrLn2;
+	@Column(length = 25)
 	private String addrName;
+	@Column(length = 10)
 	private Address addrType;
+	@Column(length = 25)
 	private String city;
+	@Column(length = 10)
 	private String stateCode;
+	@Column(length = 10)
 	private String postalCode;
+	@Column(length = 25)
 	private String country;
-	
-	public long getId() {
-		return id;
+	public long getAddressId() {
+		return addressId;
 	}
-	public void setId(long id) {
-		this.id = id;
+	public void setAddressId(long addressId) {
+		this.addressId = addressId;
 	}
 	public long getUserId() {
 		return userId;
@@ -83,6 +94,7 @@ public class UserAddressEntity {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-
+	
+	
 	
 }
